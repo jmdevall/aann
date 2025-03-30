@@ -65,6 +65,17 @@ So far, I've tested it locally without any pretensions, analyzing it roughly. In
 
 If you're a bit sharp and have some experience, you'll have noticed that many of the things that are implicitly applied here are common patterns that also occur in multi-agent systems.
 
+**state of the art** This link, https://github.com/luo-junyu/Awesome-Agent-Papers, is a project that has done an excellent job compiling papers and state-of-the-art research on agents and LLMs.
+
+**DyLAN** Through this compilation, I discovered another project, https://github.com/SALT-NLP/DyLAN, which shares similarities in proposing a layered agent network structured similarly to neural networks. My idea of using agents as "neurons" is not entirely new.
+
+The innovation here is that DyLAN proposes a solution for automatically selecting a team of agents from candidates to collaborate in a dynamic communication structure tailored to different tasks and domains. This is interesting because it introduces a metric capable of measuring an agent’s suitability for a specific task.
+
+In multi-agent systems, planning is critical. Dividing the network into layers and determining which agents participate in each step is essentially the planning process. For complex problems, steps or subtasks are planned to outline the workflow. Each step represents a network layer, and each layer consists of a group of agents reaching consensus.
+
+In my work, I focus on learning agents using backpropagation. I believe the ideas presented in DyLAN could be combined with my approach.
+
+## more ideas
 - The agents have no "search internet tools," no RAG, no "complex memory system," etc. We could augment the agent with all those things.
 
 - An interesting thing that occurs here: In neural networks, the learned information was represented in the form of "weights," and it's very difficult for a human to interpret it. Here, on the contrary, we can dive into a neuron and see its weights (what is the instruction of the agent) and we can understand it. That is, we can understand in a certain way what the neuron has learned so far. Moreover, this information can be understood by a higher-order agent, and I think this has great potential.
